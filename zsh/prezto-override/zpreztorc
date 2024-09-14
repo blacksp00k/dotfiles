@@ -30,6 +30,7 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'directory' \
   'spectrum' \
+  'gnu-utility' \
   'utility' \
   'completion' \
   'archive' \
@@ -37,9 +38,14 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'osx' \
   'ruby' \
+  'python' \
+  'node' \
+  'perl' \
   'syntax-highlighting' \
   'history-substring-search' \
   'ssh' \
+  'gpg' \
+  'homebrew' \
   'prompt'
 
 #
@@ -132,4 +138,3 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 
 # Auto start a session when Zsh is launched.
 # zstyle ':prezto:module:tmux' auto-start 'yes'
-

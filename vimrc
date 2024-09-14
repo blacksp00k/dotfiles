@@ -18,6 +18,14 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set cursorline
+set colorcolumn=80
+
+" ================= Disable Arrow Keys =================
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -65,6 +73,7 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
+autocmd FileType javascript setlocal sw=2
 
 " Auto indent pasted text
 nnoremap p p=`]<C-o>
@@ -119,3 +128,11 @@ set nomodeline
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+
+let g:rustfmt_autosave = 1
+
+" Full config: when writing or reading a buffer, and on changes in insert and
+" normal mode (after 1s; no delay when writing).
+call neomake#configure#automake('nrwi', 500)

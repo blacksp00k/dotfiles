@@ -1,1 +1,28 @@
-set editing-mode vi
+$include /etc/inputrc
+
+set blink-matching-paren On
+set completion-display-width 0
+set completion-ignore-case On
+set completion-map-case On
+set completion-query-items 1000
+set comment-begin #.
+set enable-bracketed-paste On
+set expand-tilde On
+set colored-completion-prefix on
+set colored-stats on
+set bell-style none
+set echo-control-characters off
+
+set editing-mode emacs
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+
+"\ex": 'cd !$ \015ls\015'
+"\ez": 'cd -\015'
+"\e\C-m": '\C-a "$(\C-e)"\C-a'
+"\e/": '"$(!!|fzf)"\C-a \C-m\C-m'
+
+
