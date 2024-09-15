@@ -122,25 +122,14 @@ alias el='exa -l'
 
 # show me files matching "ls grep"
 alias lsg='ll | rg'
-
 alias ports='sudo lsof -i -P'
-
-# Alias Editing
-<<<<<<< Updated upstream
-TRAPHUP() {
-  source $yadr/zsh/aliases.zsh
-}
-
 alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
-||||||| Stash base
 alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
-=======
 alias nvae='nvim $yadr/zsh/aliases.zsh' #alias edit
 alias zar='source $yadr/zsh/aliases.zsh'  #alias reload
->>>>>>> Stashed changes
 
 # vim using
 #mvim --version > /dev/null 2>&1
@@ -154,17 +143,10 @@ alias :q='exit'
 
 # vimrc editing
 alias ve='nvim ~/.vimrc'
-
-# zsh profile editing
-<<<<<<< Updated upstream
 alias ze='vim ~/.zshrc'
-||||||| Stash base
 alias ze='vim ~/.zshrc'
-alias zr='source ~/.zshrc'
-=======
 alias nvze='nvim ~/.zshrc'
 alias zr='source ~/.zshrc'
->>>>>>> Stashed changes
 
 # Git Aliases
 alias gs='git status'
@@ -226,16 +208,11 @@ alias gsmu='git submodule update'
 alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
-<<<<<<< Updated upstream
 alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
-||||||| Stash base
-=======
 alias gcs='git commit -S'
 alias glab='git log --branches=*'
 
 alias ggr='git-graph --style round --formet medium --model simple --color always'
->>>>>>> Stashed changes
-
 # Common shell functions
 alias less='less -r'
 alias tf='tail -f'
@@ -249,7 +226,6 @@ alias c='clear'
 alias gz='tar -zcvf'
 
 # Ruby
-<<<<<<< Updated upstream
 alias c='rails c' # Rails 3
 alias co='script/console' # Rails 2
 alias cod='script/console --debugger'
@@ -257,15 +233,11 @@ alias cod='script/console --debugger'
 #If you want your thin to listen on a port for local VM development
 #export VM_IP=10.0.0.1 <-- your vm ip
 alias ts='thin start -a ${VM_IP:-127.0.0.1}'
-||||||| Stash base
 alias c='rails c' # Rails 3
 alias co='script/console --irb=pry' # Rails 2
 alias ts='thin start'
-=======
-alias rc='rails c' # Rails 3
 alias co='script/console --irb=pry' # Rails 2
 alias ts='thin start'
->>>>>>> Stashed changes
 alias ms='mongrel_rails start'
 alias tfdl='tail -f log/development.log'
 alias tftl='tail -f log/test.log'
@@ -288,22 +260,17 @@ alias rdm='rake db:migrate'
 alias rdmr='rake db:migrate:redo'
 
 # Zeus
-<<<<<<< Updated upstream
 alias zs='zeus server'
-alias zc='zeus console'
 alias zr='zeus rspec'
 alias zrc='zeus rails c'
 alias zrs='zeus rails s'
 alias zrdbm='zeus rake db:migrate'
 alias zrdbtp='zeus rake db:test:prepare'
 alias zzz='rm .zeus.sock; pkill zeus; zeus start'
-||||||| Stash base
 alias zs='zeus server'
 alias zc='zeus console'
-=======
 #alias zs='zeus server'
 #alias zc='zeus console'
->>>>>>> Stashed changes
 
 # Rspec
 alias rs='rspec spec'
@@ -334,11 +301,8 @@ alias dbmd='spring rake db:migrate:down'
 alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
-<<<<<<< Updated upstream
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
-||||||| Stash base
 alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
-=======
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 alias brewf='sudo chown -R "$USER":admin /usr/local'
 
@@ -452,9 +416,6 @@ alias nvgcu='nv .gitconfig.user'
 alias nvgi='nv .gitignore'
 
 # set grep alternatives to color always
-#alias grep='grep --color=auto'
-#alias fgrep='fgrep --color=auto'
-#alias egrep='egrep --color=auto'
 alias grep='rg'
 alias rg='rg -j 6 --color always -p -n  -i --engine auto'
 
@@ -462,5 +423,4 @@ alias rg='rg -j 6 --color always -p -n  -i --engine auto'
 alias ipy='ipython --profile=startup'
 alias nrepl='stdlib repl'
 
-alias upg='brew cleanup --prune=all -q && asdf plugin update --all && asdf update && rvm reload &&  gem update --system && gem update && gem cleanup && npm update && npm audit fix --force && cargo install-update -a && z &&  pip install --upgrade pip && pip install --upgrade -r requirements.txt && pyenv update && nvpu'
->>>>>>> Stashed changes
+alias upg='brew cleanup --prune=all -q && asdf plugin update --all && asdf update && rvm reload &&  gem update --system && gem update && gem cleanup && npm update && npm audit fix --force && cargo install-update -a && z &&  pip install --upgrade pip && pip install --upgrade -r requirements.txt && pip cache purge && pyenv update && nvpu'
