@@ -135,4 +135,4 @@ let g:rustfmt_autosave = 1
 
 " Full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 1s; no delay when writing).
-call neomake#configure#automake('nrwi', 500)
+"call neomake#configure#automake('nrwi', 500)

@@ -20,14 +20,11 @@ for fpath in split(globpath(vimsettings, '*.vim'), '\n')
   exe 'source' fpath
 
 set hidden
-let g:racer_cmd = "~/.cargo/bin/racer"
-let $RUST_SRC_PATH="~/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
-let g:racer_experimental_completer = 1
 
 au BufNewFile,BufRead *.nse set filetype=lua
 
 syntax enable
 set background=dark
 set termguicolors
-colorscheme material-theme
+colorscheme nord
 endfor
