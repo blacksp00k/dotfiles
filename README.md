@@ -27,10 +27,6 @@
 *Linux/Ubuntu is not supported! If it works, great. If it doesn't, please don't complain. You may need to install zsh if you don't already have it.*
 *That being said, check the Docker section below*
 
-## Mailing List
-
-Got questions, concerns, want to hear announcements? Join the [Google Group](https://groups.google.com/forum/#!forum/yadr-users)
-
 Please use GitHub Issues for pull requests or bug reports only.
 
 ## Screenshot
